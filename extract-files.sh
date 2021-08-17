@@ -13,8 +13,8 @@ fi
 
 set -e
 
-export DEVICE=alioth
-export DEVICE_COMMON=sm8250-common
+export DEVICE=haydn
+export DEVICE_COMMON=sm8350-common
 export VENDOR=xiaomi
 
 "./../../${VENDOR}/${DEVICE_COMMON}/extract-files.sh" "$@"

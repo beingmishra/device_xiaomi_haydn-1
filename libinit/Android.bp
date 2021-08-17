@@ -5,8 +5,8 @@
 //
 
 cc_library_static {
-    name: "libinit_alioth",
-    defaults: ["//device/xiaomi/sm8250-common:libinit_kona_defaults"],
-    srcs: ["init_alioth.cpp"],
-    whole_static_libs: ["//device/xiaomi/sm8250-common:libinit_kona"],
+    name: "libinit_haydn",
+    defaults: ["//device/xiaomi/sm8350-common:libinit_lahaina_defaults"],
+    srcs: ["init_haydn.cpp"],
+    whole_static_libs: ["//device/xiaomi/sm8350-common:libinit_lahaina"],
 }

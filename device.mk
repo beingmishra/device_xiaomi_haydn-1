@@ -7,12 +7,15 @@
 # Inherit virtual_ab_ota product
 $(call inherit-product, \
     $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
+TARGET_BOARD_PLATFORM := lahaina
 
 # A/B
 PRODUCT_PACKAGES += \
     android.hardware.boot@1.1-impl-qti \
     android.hardware.boot@1.1-impl-qti.recovery \
-    android.hardware.boot@1.1-service
+    android.hardware.boot@1.1-service \
+    bootctrl.lahaina \
+    bootctrl.lahaina.recovery
 
 PRODUCT_PACKAGES_DEBUG += \
     bootctl
@@ -68,8 +71,8 @@ PRODUCT_COPY_FILES += \
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
-# Inherit from sm8250-common
-$(call inherit-product, device/xiaomi/sm8250-common/kona.mk)
+# Inherit from sm8350-common
+$(call inherit-product, device/xiaomi/sm8350-common/lahaina.mk)
 
 # Inherit from vendor blobs
-$(call inherit-product, vendor/xiaomi/alioth/alioth-vendor.mk)
+$(call inherit-product, vendor/xiaomi/haydn/haydn-vendor.mk)
